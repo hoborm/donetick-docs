@@ -81,7 +81,7 @@ const config = {
         id: 'api', // plugin id
         docsPluginId: 'classic', // configured for preset-classic
         config: {
-          donetick_api: { // Replace 'petstore' with your API name
+          api: {
             specPath: './src/openapi/swagger.yaml', // Path to your OpenAPI spec
             outputDir: 'docs/api', // Where to output generated docs
             sidebarOptions: {
