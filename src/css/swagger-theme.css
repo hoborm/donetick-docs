@@ -1,0 +1,69 @@
+/* Light theme (default Swagger UI) */
+.swagger-light {
+  background-color: #fff;
+    }
+
+.swagger-light .swagger-ui {
+  color: #3b4151;
+}
+
+/* Dark theme overrides */
+.swagger-dark {
+  background-color: #1b1b1d;
+}
+
+.swagger-dark .swagger-ui {
+  filter: invert(88%) hue-rotate(180deg);
+}
+
+.swagger-dark .swagger-ui .microlight {
+  filter: invert(100%) hue-rotate(180deg);
+}
+
+/* Fix images/logos in dark mode */
+.swagger-dark .swagger-ui img {
+  filter: invert(100%) hue-rotate(180deg);
+}
+
+.swagger-dark .swagger-ui .info .title small pre {
+  color: #e3e3e3;
+}
+
+.swagger-dark .swagger-ui .info .title small pre {
+  color: #e3e3e3;
+}
+
+.swagger-dark .swagger-ui .info .title pre {
+  background: transparent;
+  color: #e3e3e3;
+}
+.swagger-light .swagger-ui .info .title pre {
+  background: transparent;
+  color: #e3e3e3;
+}
+
+/* Remove borders from table cells */
+.swagger-ui table th,
+.swagger-ui table td,
+.swagger-ui table tr {
+  border: none !important;
+}
+
+/* Remove alternating row colors */
+.swagger-ui table tbody tr {
+  background: transparent !important;
+}
+
+.swagger-ui table tbody tr:nth-of-type(odd),
+.swagger-ui table tbody tr:nth-of-type(even) {
+  background: transparent !important;
+}
+
+/* Remove background color from response column headers */
+.swagger-ui .response-col_description {
+  background: transparent !important;
+}
+
+.swagger-ui .col_header {
+  background: transparent !important;
+}

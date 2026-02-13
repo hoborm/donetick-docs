@@ -82,7 +82,7 @@ const config = {
         docsPluginId: 'classic', // configured for preset-classic
         config: {
           api: {
-            specPath: './src/openapi/swagger.yaml', // Path to your OpenAPI spec
+            specPath: './src/static/openapi/swagger.yaml', // Path to your OpenAPI spec
             outputDir: 'docs/api', // Where to output generated docs
             sidebarOptions: {
               groupPathsBy: 'tag',
@@ -111,7 +111,7 @@ const config = {
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
-            position: 'left',
+            position: 'left', 
             label: 'Docs',
           },
           {
@@ -125,6 +125,11 @@ const config = {
             href: 'https://github.com/donetick/donetick',
             label: 'GitHub',
             position: 'right',
+          },
+          {
+            to: '/api-client',
+            label: 'API Client',
+            position: 'left',
           },
         ],
       },
