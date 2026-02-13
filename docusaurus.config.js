@@ -45,7 +45,7 @@ const config = {
         docs: {
           sidebarPath: './sidebars.js',
           routeBasePath: '/', 
-          
+          docItemComponent: '@theme/ApiItem', // Derived from docusaurus-theme-openapi
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -74,7 +74,25 @@ const config = {
       }),
     ],
   ],
-
+ plugins: [
+    [
+      'docusaurus-plugin-openapi-docs',
+      {
+        id: 'api', // plugin id
+        docsPluginId: 'classic', // configured for preset-classic
+        config: {
+          donetick_api: { // Replace 'petstore' with your API name
+            specPath: './src/openapi/swagger.yaml', // Path to your OpenAPI spec
+            outputDir: 'docs/api', // Where to output generated docs
+            sidebarOptions: {
+              groupPathsBy: 'tag',
+            },
+          },
+        },
+      },
+    ],
+  ],
+  themes: ['docusaurus-theme-openapi-docs'], // Export theme components
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -171,7 +189,7 @@ const config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
-    }),
-};
+    })
+  };
 
 export default config;
