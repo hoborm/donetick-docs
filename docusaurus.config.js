@@ -82,7 +82,7 @@ const config = {
         docsPluginId: 'classic', // configured for preset-classic
         config: {
           api: {
-            specPath: './src/static/openapi/swagger.yaml', // Path to your OpenAPI spec
+            specPath: './static/openapi/swagger.yaml', // Path to your OpenAPI spec
             outputDir: 'docs/api', // Where to output generated docs
             sidebarOptions: {
               groupPathsBy: 'tag',
